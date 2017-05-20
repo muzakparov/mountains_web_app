@@ -7,7 +7,8 @@ var express                 = require("express"),
     User                    = require("./models/user"),
     Mountain                = require("./models/mountain"),
     indexRoute              = require("./routes/index"),
-    mountainRoute           = require("./routes/mountains");
+    mountainRoute           = require("./routes/mountains"),
+    commentRoute            = require("./routes/comments");
 
 var url = process.env.DATABASEURL || "mongodb://localhost/mountain_db";    
 mongoose.connect(url);
@@ -26,6 +27,7 @@ app.use(passport.session());
 
 app.use(indexRoute);
 app.use(mountainRoute);
+app.use(commentRoute);
 
 app.set("view engine","ejs");
 
