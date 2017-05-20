@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<h1>Welcome to the Mountains</h1>
+
+<a href="/mountains/new">Add a New Mountain</a>
+
+<% mountains.forEach(function(mountain){ %>
+    <h2><%= mountain.title %></h2>
+    <img src="<%= mountain.image %>" alt="image">
+    <p><%= mountain.description %></p>
+    <a href="/mountains/<%= mountain._id %>">Read More</a>
+<% }); %>
+
+<% include partials/footer %>

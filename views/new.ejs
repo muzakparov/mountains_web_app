@@ -1,0 +1,10 @@
+<% include partials/header %>
+
+<form action="/mountains" method="POST">
+    <input type="text" name="mountain[title]" placeholder="Title">
+    <input type="text" name="mountain[image]" placeholder="Image URL">
+    <input type="text" name="mountain[description]" placeholder="Description">
+    <input type="submit" value="Create">
+</form>
+
+<% include partials/footer %>

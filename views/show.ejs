@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+<h2><%= mountain.title %></h2>
+<img src="<%= mountain.image %>" alt="image">
+<p><%= mountain.description %></p>
+<a href="/mountains/<%= mountain._id %>/edit">Edit</a>
+
+<form action="/mountains/<%= mountain._id %>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>
+
+<% include partials/footer %>
